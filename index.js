@@ -6,10 +6,11 @@ import userRouter from "./routes/userRoutes.js";
 import "dotenv/config";
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRoute.js";
+import e from "express";
 
 //App Config
 const app = express();
-const port = 4000;
+const port = 5000;
 
 //middleware it will parse the json data from the frontend
 app.use(express.json());
@@ -30,6 +31,8 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+export default app;
 
 // mongodb+srv://rafly21ardiansyah:<db_password>@cluster0.khv8s.mongodb.net/?
 // Model > Controller > Route > Server
